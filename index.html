@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv's Portfolio</title>
+    <link href="img/logo.svg" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="responsivecss.css" rel="stylesheet">
+    <script src="Javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#ffd277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-code-2" id="logo">
+                    <path d="m18 16 4-4-4-4" />
+                    <path d="m6 8-4 4 4 4" />
+                    <path d="m14.5 4-5 16" />
+                </svg>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#aboutline">About</a></li>
+                <li><a href="#projectline">Project</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#FFD277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x" id="menuclose">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#FFD277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-menu" id="menuopen">
+            </svg>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Home">
+            <div class="leftsection">
+                Hi my name is <span class="name">Dhruv</span>
+                <div>
+                    And i am passionate about
+                </div>
+                <span id="passion"></span>
+            </div>
+            <div class="card__inner">
+                <div class="card__content card_content--front">
+                    <div id="bot">
+                        <script>
+                            var animation = bodymovin.loadAnimation({
+                                container: document.getElementById('bot'),
+                                path: 'img/Devil_Ai.json',
+                                renderer: 'svg',
+                                loop: true,
+                                autoplay: true,
+                                name: "Demo Animation",
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <hr id="aboutline">
+    <section id="about">
+        <div class="about_head">
+            About
+        </div>
+
+        <div class="aboutsection">
+            <p class="aboutpra1">
+                Hello! I'm Dhruv Kadam, a developer with a zeal for building innovative solutions that make a
+                difference.
+                With a strong foundation in Python, I've ventured into the exciting realms of Artificial Intelligence
+                and
+                Machine Learning. Whether it's crafting intelligent systems that learn from data or developing web
+                applications that simplify lives, I'm driven by a passion for creating technology that inspires.
+            </p>
+            <p id="aboutpra2">
+                With a keen eye for detail and a curiosity to explore, I'm always looking for ways to improve and push
+                the
+                boundaries of what's possible. My passion for problem-solving and innovative thinking has led me to work
+                on
+                a range of projects that showcase my skills in Python, AI, ML, and Web Development.
+            </p>
+            <p id="aboutpra3">
+                Take a look at my projects, and let's connect if you share my enthusiasm for technology and innovation.
+            </p>
+        </div>
+    </section>
+
+    <hr id="projectline">
+    <section id="Project">
+        <div class="project_head">
+            Major Projects
+        </div>
+        <div class="wrapper">
+            <div class="card">
+                <p class="projects_pra">Meet Dark, the sleek AI assistant, trusted ally to Dhruv Kadam. With wit and processing power, Dark navigates data with ease, providing calculated insights and clever suggestions.</p>
+                <div id="Garin_ai">
+                  <picture>
+                    <script>
+                        var animation = bodymovin.loadAnimation({
+                            container: document.getElementById('Garin_ai'),
+                            path: 'img\black-clover.json',
+                            renderer: 'svg',
+                            loop: true,
+                            autoplay: true,
+                            name: "Animation",
+                        });
+                    </script>
+                  </picture>
+                </div>
+                <div class="button">Dark AI</div>
+            </div>
+            <div class="card">
+                <p class="projects_pra"></p>
+                <div class="image">
+                    <!-- <img src="img/garinai_58254bb4.gif" alt=""> -->
+                </div>
+                <div class="button">Grain AI</div>
+            </div>
+            <div class="card">
+                <p class="projects_pra"></p>
+                <div class="image">
+                    <!-- <img src="img/garinai_58254bb4.gif" alt=""> -->
+                </div>
+                <div class="button">Puppies</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<!-- Setup and start animation! -->
+<script>
+    var typed = new Typed('#passion', {
+        strings: ['Web Development.', 'Machine Learning.','Artificial Intelligence.','<i>Python.'],
+        typeSpeed: 40,
+        loop: true
+    });
+</script>
+</body>
+
+</html>

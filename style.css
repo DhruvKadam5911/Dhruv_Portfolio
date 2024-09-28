@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffd277;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffd277;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo svg {
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+nav {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+    z-index: 100;
+}
+
+nav ul {
+    margin-right: 30px;
+    display: flex;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 20px;
+}
+
+nav ul li a {
+    position: relative;
+    font-size: 20px;
+    color: #ffd277;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+
+nav ul li a:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    background: #ffd277;
+    position: absolute;
+    left: 0px;
+    bottom: -4px;
+    transition: .5s ease-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+main #Home{
+    margin-top: 230px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.leftsection {
+    font-size: 2rem;
+    color: #2a2b27;
+}
+
+.leftsection .name {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffd277;
+}
+
+.leftsection #passion {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffd277;
+}
+
+.rightsection {
+    border-radius: 560px;
+    width: 400px;
+    height: 300px;
+}
+
+.rightsection {
+    display: flex;
+    justify-content: center;
+    width: 33%;
+    background-color: transparent;
+    width: 400px;
+    height: 300px;
+    border: 0px solid #f1f1f1;
+    border-radius: 160000px;
+    /* perspective: 1000px; */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    border-radius: 160px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s;
+    /* transform-style: preserve-3d; */
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.rightsection:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+#flip-card-front,
+#flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    border-radius: 160px;
+}
+
+#flip-card-front {
+    border-radius: 200px;
+    width: 300px;
+    height: 300px;
+}
+
+/* Style the front side (fallback if image is missing) */
+#flip-card-front {
+    background-color: #ffffff;
+    border-radius: 160px;
+    color: black;
+}
+
+/* Style the back side */
+#flip-card-front {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    width: 400px;
+    height: 300px;
+    border-radius: 160px;
+}
+
+hr {
+    margin: 60px 60px;
+}
+
+/* End of home css */
+/* -------------------------------------------------------------------- */
+
+/* Start of cards css */
+
+.card {
+    border-radius: 3px;
+    perspective: 1000px;
+}
+
+.bot {
+    height: 300px;
+    width: 400px;
+}
+
+.card__inner {
+    height: 300px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card__content {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* start of cards css */
+*,
+*+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-block: 4em;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    height: 16em;
+    padding: 1em;
+    background: #faf0e6;
+    border-radius: 1em;
+}
+
+.card:hover {
+    height: 17em;
+}
+
+.image {
+    position: absolute;
+    inset: 0.5em 0.5em 0em 0.5em;
+}
+
+.card:hover .image {
+    position: absolute;
+    inset: -4em 2em 0em 2em;
+}
+
+img {
+    width: 19em;
+    height: 10em;
+    max-width: 100%;
+    object-fit: cover;
+    border: 0em solid #0000;
+    border-radius: 0.8em;
+}
+
+.card:hover img {
+    border: 0.5em solid #171412;
+    border-radius: 1.2em;
+}
+
+.projects_pra {
+    font-size: .9rem;
+    position: absolute;
+    top: 1em;
+    opacity: 0;
+}
+
+.card:hover p {
+    transition-delay: 0.15s;
+    position: absolute;
+    top: 8em;
+    opacity: 1;
+}
+
+.button {
+    position: absolute;
+    bottom: 0.4em;
+    left: 50%;
+    translate: -50% 0;
+    padding: 0.25em 1em;
+    background: #ffa565;
+    outline: 0em solid #0000;
+    border-radius: 4em;
+}
+
+.card:hover .button {
+    bottom: -1.3em;
+    padding: 0.5em 2em;
+    outline: 0.5em solid #171412;
+}
+
+/* End of cards css */
+
+
+
+#about {
+    max-width: 80vw;
+    margin: auto;
+    
+}
+.about_head {
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.aboutsection {
+    font-size: 1.1rem;
+}
+
+.aboutpra1 {
+    text-align: justify;
+    margin: 30px 0px 0px 0px;
+}
+
+#aboutpra2 {
+    text-align: justify;
+    margin: 20px 0px 0px 0px;
+}
+
+#aboutpra3 {
+    text-align: justify;
+    margin: 20px 0px 30px 0px;
+}
+
+.project_head {
+    font-size: 2.5rem;
+    font-weight: 900;
+    max-width: 80vw;
+    margin: auto;
+}
